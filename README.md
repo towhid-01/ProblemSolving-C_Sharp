@@ -19,10 +19,3 @@ This repository serves multiple purposes:
 - **Knowledge Sharing**: It may be useful for anyone interested in C# or looking for examples of CodeWars challenges and solutions.
 - **Version Control Practice**: It also provides me with an opportunity to practice Git and GitHub workflows.
 
-## How to Use This Repository
-
-1. Navigate to a specific folder for the Kata rank you're interested in:
-   ```bash
-   cd kata-4  # For 4 kyu Kata solutions
-   cd kata-5  # For 5 kyu Kata solutions
-   cd kata-6  # For 6 kyu Kata solutions
