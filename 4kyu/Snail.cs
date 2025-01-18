@@ -1,30 +1,36 @@
 using System;
 using System.Collections.Generic;
+
 public class SnailSolution
 {
-   public static int[] Snail(int[][] array)
-   {
-    List<int> vec = new List<int>();
-        int up = 0,lower = array.length - 1,left = 0,right = array[0].length - 1,
-        i = up,
-        j = left;
+    public static int[] Snail(int[][] array)
+    {
+        List<int> vec = new List<int>();  
+        
+        int up = 0, lower = array.Length - 1, left = 0, right = array[0].Length - 1;
+        
+        while (up <= lower && left <= right){
+           
+            for (int j = left; j <= right; j++)  vec.Add(array[up][j]);  
+                
+            up++; 
 
-    while (1) {
-        if (up++ > lower) break;
+            for (int i = up; i <= lower; i++) vec.Add(array[i][right]); 
 
-        for (; j < right; j++) vec.Add(array[i][j]);
-        if (right-- < left) break;
+            right--;  
 
-        for (; i < lower; i++) vec.Add(array[i][j]);
-        if (lower-- < up) break;
+            if (up <= lower){
+                for (int j = right; j >= left; j--)vec.Add(array[lower][j]);  
+                lower--;  
+            }
 
-        for (; j > left; j--) vec.Add(array[i][j]);
-        if (left++ > right) break;
+           
+            if (left <= right){
+                for (int i = lower; i >= up; i--)vec.Add(array[i][left]);  
+                left++;  
+            }
+        }
 
-        for (; i > up; i--) vec.Add(array[i][j]);
+        return vec.ToArray(); 
     }
-
-    vec.Add(array[i][j]);
-    return vec;
-   }
 }
