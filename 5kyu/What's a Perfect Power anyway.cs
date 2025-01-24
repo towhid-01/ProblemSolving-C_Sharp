@@ -5,10 +5,10 @@ public class PerfectPower
     {
         for (int i = 2; i <= Math.Sqrt(n); i++)
         {
-            int x = (int)Math.Round(Math.Log(n, i));
-            if (Math.Pow(i, x) == n)
+            int power = (int)Math.Round(Math.Log(n, i));
+            if (Math.Pow(i, power) == n)
             {
-                return (i, x);
+                return (i, power);
             }
         }
         return null;
