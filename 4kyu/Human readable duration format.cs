@@ -17,8 +17,8 @@ public class HumanTimeFormat{
         if(customizableStringArray.Count == 0) return "now"; 
         if(customizableStringArray.Count == 1) return customizableStringArray[0];
         
-        string s = string.Join(", ", customizableStringArray.Take(customizableStringArray.Count - 1)) + " and " + customizableStringArray.Last();
+        string ans = string.Join(", ", customizableStringArray.Take(customizableStringArray.Count - 1)) + " and " + customizableStringArray.Last();
         
-        return s;
+        return ans;
   }
 }
