@@ -22,7 +22,7 @@ public class Kata
         char temp = biggerNumber[i];
         biggerNumber[i] = biggerNumber[j];
         biggerNumber[j] = temp;
-        Array.Reverse(biggerNumber, i + 1, biggerNumber.Length - (i + 1));
+        Array.Reverse(biggerNumber, i + 1, biggerNumber.Length - (i + 1)); // reverse the rest of the array
 
         return long.Parse(new string(biggerNumber));
     }
